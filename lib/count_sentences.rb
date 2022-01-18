@@ -27,7 +27,10 @@ class String
   end
 
   def count_sentences
-    self.split
+    
+
+    arr = self.split(/[.|!|?]/).reject {|c| c.strip.empty?}
+    return arr.length
     # split, eliminate empty strings, count
 
   end
